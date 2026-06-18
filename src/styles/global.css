@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-copiv-red: #E22732;
+  --color-copiv-redDark: #C11D27;
+  --color-copiv-green: #37553A;
+  --color-copiv-greenDark: #223824;
+  --color-copiv-greenLight: #4B734F;
+  --color-copiv-gold: #EFB810;
+  --color-copiv-goldDark: #D4A30D;
+  --color-copiv-black: #0F120F;
+  --color-copiv-darkGray: #161916;
+  --color-copiv-lightGray: #F3F4F6;
+  --color-copiv-silver: #C0C0C0;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0F120F;
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header-gradient {
+  background: linear-gradient(135deg, #161916 0%, #0F120F 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #FFFFFF 50%, #EFB810 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tarjetas de servicios premium con reflejos */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(239, 184, 16, 0.1), transparent);
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+.service-card:hover::after {
+  left: 125%;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(55, 85, 58, 0.25);
+  border-color: #EFB810;
+}
+
+/* Efecto láser de escaneo inteligente en las portadas */
+.laser-scanner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #E22732, #EFB810, #E22732, transparent);
+  box-shadow: 0 0 15px #E22732;
+  animation: scanning 3.5s infinite linear;
+  z-index: 20;
+}
+@keyframes scanning {
+  0% { top: 0%; }
+  50% { top: 100%; }
+  100% { top: 0%; }
+}
+
+/* Hotspot pulsatil para despiece técnico */
+.hotspot-pulse {
+  position: relative;
+}
+.hotspot-pulse::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 9999px;
+  background-color: #E22732;
+  opacity: 0.75;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Ocultar barra de scroll para el chat */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Efecto de borde con destello LED táctico */
+.led-border-glow {
+  box-shadow: 0 0 15px rgba(239, 184, 16, 0.15);
+  border: 1px solid rgba(239, 184, 16, 0.25);
+}

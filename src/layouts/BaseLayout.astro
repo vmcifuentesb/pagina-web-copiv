@@ -1,0 +1,115 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/sections/Header.astro';
+import Footer from '../components/sections/Footer.astro';
+import EmergencyButton from '../components/ui/EmergencyButton';
+import ChatJaguar from '../components/ui/ChatJaguar';
+import SkipToContent from '../components/ui/SkipToContent.astro';
+import { CSP } from '../utils/csp';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "COPIV TIKAL - Seguridad Privada de Elite", 
+  description = "COPIV TIKAL S.A. ofrece soluciones avanzadas de seguridad privada, agentes tácticos y plataforma de garitas inteligentes en Guatemala." 
+} = Astro.props;
+
+const heroImg = "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80";
+const canonical = `${Astro.site?.origin ?? 'https://copivtikal.com'}${Astro.url.pathname}`;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content={CSP} />
+    
+    <!-- Open Graph Metadata (SEO) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={heroImg} />
+    
+    <!-- Preload Hero Image (LCP) -->
+    <link rel="preload" as="image" href={heroImg} imagesrcset="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80 400w, https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80 800w" imagesizes="(max-width: 768px) 400px, 800px" />
+
+    <!-- Preconnect a orígenes críticos de terceros -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- FontAwesome (diferido: no bloquea renderizado) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    
+    <!-- Leaflet CSS (diferido: solo se descarga sin bloquear) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="print" onload="this.media='all'" />
+    
+    <!-- ClientRouter for high performance View Transitions -->
+    <ClientRouter />
+
+    <!-- Speculation Rules for instant route navigation preloading -->
+    <script type="speculationrules" is:inline>
+      {
+        "prerender": [
+          {
+            "source": "list",
+            "urls": ["/servicios", "/diagnostico", "/empresa", "/contacto", "/privacidad", "/terminos"]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col overflow-x-hidden bg-copiv-black text-white selection:bg-copiv-gold selection:text-copiv-black">
+    <!-- Skip to content (accesibilidad) -->
+    <SkipToContent />
+
+    <!-- Header Navigation -->
+    <Header />
+
+    <!-- Main Page Content -->
+    <main id="main-content" class="flex-grow relative">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+
+    <!-- Emergency Floating Button (React Island) -->
+    <EmergencyButton client:load />
+
+    <!-- Chat Jaguar Assistant (React Island) -->
+    <ChatJaguar client:idle />
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 left-6 z-50 space-y-2 pointer-events-none"></div>
+
+    <script is:inline>
+      document.addEventListener('show-toast', (e) => {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        const toast = document.createElement('div');
+        toast.className = "bg-copiv-darkGray border-l-4 border-copiv-gold text-white text-xs px-4 py-3 rounded-xl shadow-lg flex items-center gap-2 pointer-events-auto transition-all duration-300 opacity-0 transform translate-y-2 font-sans";
+        toast.textContent = e.detail;
+        container.appendChild(toast);
+        setTimeout(() => toast.classList.remove('opacity-0', 'translate-y-2'), 50);
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-2');
+          setTimeout(() => toast.remove(), 300);
+        }, 4000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlueprintExploder from '../components/ui/BlueprintExploder';
+import ServicesGrid from '../components/ui/ServicesGrid';
+---
+
+<BaseLayout title="Servicios Especializados de Seguridad - COPIV TIKAL" description="Catálogo completo de soluciones tácticas de seguridad física y monitoreo inteligente con IA en toda Guatemala.">
+  
+  <!-- Header Section -->
+  <div class="bg-gradient-to-b from-copiv-darkGray to-copiv-black py-16 border-b border-copiv-green/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-copiv-gold font-bold text-sm uppercase tracking-widest block">Catálogo de Servicios</span>
+      <h1 class="text-4xl font-montserrat font-extrabold text-white m-0">Nuestras Soluciones de Seguridad de Elite</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto font-sans">Garantizamos la continuidad operativa de su empresa mediante protocolos rigurosos y tecnología adaptada a su infraestructura.</p>
+    </div>
+  </div>
+
+  <!-- DESPIECE TÉCNICO INTERACTIVO (HARDWARE EXPLODER) -->
+  <div class="py-16 bg-copiv-darkGray/20 border-b border-copiv-green/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs text-copiv-gold font-bold uppercase tracking-widest block"><i class="fa-solid fa-microchip mr-1"></i> Despiece Técnico de Infraestructura</span>
+        <h2 class="text-2xl sm:text-3xl font-montserrat font-bold text-white m-0">Sistemas Integrados de Seguridad COPIV</h2>
+        <p class="text-xs text-gray-400 font-sans">Haga clic sobre los hotspots de la garita inteligente para revelar los detalles de ingeniería que protegen sus activos.</p>
+      </div>
+
+      <!-- React Island -->
+      <BlueprintExploder client:load />
+    </div>
+  </div>
+
+  <!-- Services Filter & Grid -->
+  <div class="py-16 bg-copiv-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- React Island -->
+      <ServicesGrid client:visible />
+    </div>
+  </div>
+
+</BaseLayout>

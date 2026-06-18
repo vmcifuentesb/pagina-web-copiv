@@ -1,0 +1,112 @@
+---
+import { NAV_ITEMS } from '../../utils/constants';
+
+const pathname = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === '/') {
+    return pathname === '/' || pathname === '/index.html';
+  }
+  return pathname.startsWith(path);
+};
+---
+
+<header class="sticky top-0 z-50 bg-copiv-darkGray/90 backdrop-blur-md border-b border-copiv-green/30 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Minimalist Brand Name -->
+      <a href="/" data-astro-prefetch class="flex items-center gap-3 decoration-none">
+        <div class="border-l-4 border-copiv-gold pl-3 transition-all duration-300 hover:border-copiv-red">
+          <span class="font-montserrat font-black text-2xl sm:text-3xl tracking-wider text-white block leading-none">COPIV</span>
+          <span class="font-montserrat font-bold text-[10px] sm:text-[11px] tracking-widest text-copiv-gold uppercase block mt-1">TIKAL S.A.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Navigation -->
+      <nav class="hidden md:flex space-x-1 lg:space-x-4">
+        {NAV_ITEMS.map(item => (
+          <a
+            href={item.href}
+            data-astro-prefetch
+            class={`px-3 py-2 rounded-md text-sm font-medium transition ${
+              isActive(item.href)
+                ? 'text-copiv-gold border-b-2 border-copiv-gold'
+                : 'text-gray-300 hover:text-copiv-gold'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Desktop CTA and Contact -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:+50230662135" class="text-sm font-semibold text-white hover:text-copiv-gold flex items-center gap-2 transition hover:scale-105">
+          <i class="fa-solid fa-phone text-copiv-red animate-pulse"></i>
+          <span>+502 3066 2135</span>
+        </a>
+        <a href="/diagnostico" data-astro-prefetch class="bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold px-5 py-2.5 rounded-lg shadow-md shadow-copiv-red/20 hover:shadow-lg hover:shadow-copiv-red/30 hover:scale-105 transition-all text-sm decoration-none">
+          Auditoría de Riesgo <i class="fa-solid fa-shield-halved ml-1"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-toggle" class="text-gray-300 hover:text-white focus-visible:ring-2 focus-visible:ring-copiv-gold focus-visible:rounded-lg p-2" aria-label="Menu principal">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-copiv-darkGray border-t border-copiv-green/30">
+    <div class="px-2 pt-2 pb-4 space-y-1">
+      {NAV_ITEMS.map(item => (
+        <a
+          href={item.href}
+          data-astro-prefetch
+          class={`block w-full text-left px-4 py-2.5 rounded-md text-base font-medium transition decoration-none ${
+            isActive(item.href)
+              ? 'text-copiv-gold bg-copiv-green/20'
+              : 'text-white hover:bg-copiv-green/30'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="pt-4 border-t border-copiv-green/20 px-4 flex flex-col gap-3">
+        <a href="tel:+50230662135" class="text-sm font-semibold text-white hover:text-copiv-gold flex items-center gap-2">
+          <i class="fa-solid fa-phone text-copiv-red"></i>
+          <span>+502 3066 2135</span>
+        </a>
+        <a href="/diagnostico" data-astro-prefetch class="w-full bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold py-2.5 rounded-lg text-center decoration-none block">
+          Auditar mis Instalaciones
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  function setupMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('mobile-menu-icon');
+
+    if (toggleBtn && mobileMenu && menuIcon) {
+      toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.className = 'fa-solid fa-bars text-2xl';
+        } else {
+          menuIcon.className = 'fa-solid fa-xmark text-2xl';
+        }
+      });
+    }
+  }
+
+  // Setup on initial load and after view transitions
+  setupMobileMenu();
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>

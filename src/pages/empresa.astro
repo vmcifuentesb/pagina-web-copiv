@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CaseStudySlider from '../components/ui/CaseStudySlider';
+---
+
+<BaseLayout title="La Empresa - COPIV TIKAL" description="Conozca la historia, misión, visión y los rigurosos procesos de selección y confiabilidad de nuestro personal de seguridad.">
+  
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-b from-copiv-darkGray to-copiv-black py-16 border-b border-copiv-green/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-copiv-red font-bold text-sm uppercase tracking-widest block">Nuestra Historia e Identidad</span>
+      <h1 class="text-4xl font-montserrat font-extrabold text-white m-0">Sobre COPIV TIKAL</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base font-sans">
+        Corporación privada de investigación y vigilancia dedicada a blindar el patrimonio, la información y la integridad de nuestros clientes con los más altos estándares de seguridad.
+      </p>
+    </div>
+  </div>
+
+  <div class="py-16 bg-copiv-black">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Core Mission and Vision -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-copiv-darkGray border-l-4 border-copiv-red p-8 rounded-r-2xl text-left">
+          <h3 class="font-montserrat font-bold text-xl text-white mb-3 m-0">Nuestra Misión</h3>
+          <p class="text-gray-300 text-sm leading-relaxed font-light font-sans m-0">
+            Brindar servicios de soporte técnico y soluciones tecnológicas en seguridad privada con altos estándares de calidad, confiabilidad y eficiencia, garantizando la continuidad operativa y la protección integral de nuestros clientes.
+          </p>
+        </div>
+        <div class="bg-copiv-darkGray border-l-4 border-copiv-gold p-8 rounded-r-2xl text-left">
+          <h3 class="font-montserrat font-bold text-xl text-white mb-3 m-0">Nuestra Visión</h3>
+          <p class="text-gray-300 text-sm leading-relaxed font-light font-sans m-0">
+            Ser una empresa líder en servicios tecnológicos y soporte especializado en seguridad privada, reconocida por nuestra excelencia operativa, innovación constante y compromiso con la protección y confianza de nuestros clientes, tanto a nivel nacional como internacional.
+          </p>
+        </div>
+      </div>
+
+      <!-- TESTIMONIOS E INCIDENTES FRUSTRADOS EN GUATEMALA -->
+      <div class="animate-[fade-in_0.4s_ease-out]">
+        <!-- React Island -->
+        <CaseStudySlider client:visible />
+      </div>
+
+      <!-- GARANTÍA DE RECLUTAMIENTO Y CONFIANZA -->
+      <div class="bg-copiv-darkGray/50 border border-copiv-green/30 rounded-3xl p-8 space-y-6">
+        <div class="text-center">
+          <span class="text-xs text-copiv-gold font-bold uppercase tracking-widest block"><i class="fa-solid fa-user-shield mr-1"></i> Protocolos de Confianza y Selección</span>
+          <h3 class="font-montserrat font-extrabold text-2xl text-white mt-1 m-0">Garantía Absoluta en Selección de Agentes</h3>
+          <p class="text-xs text-gray-400 mt-2 font-sans">Nuestros rigurosos filtros de contratación de personal de seguridad física para industrias, condominios y empresas en Guatemala:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 text-center">
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/10">
+            <span class="block text-2xl font-bold text-copiv-red mb-1">100%</span>
+            <span class="block text-xs font-semibold text-white">Pruebas de Polígrafo</span>
+            <p class="text-[10px] text-gray-400 mt-1 font-sans">Evaluaciones de confiabilidad periódicas por analistas certificados.</p>
+          </div>
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/10">
+            <span class="block text-2xl font-bold text-copiv-red mb-1">Cero</span>
+            <span class="block text-xs font-semibold text-white">Antecedentes Penales</span>
+            <p class="text-[10px] text-gray-400 mt-1 font-sans">Verificación directa y constante ante el MP y la PNC de Guatemala.</p>
+          </div>
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/10">
+            <span class="block text-2xl font-bold text-copiv-red mb-1">Trimestral</span>
+            <span class="block text-xs font-semibold text-white">Control Toxicológico</span>
+            <p class="text-[10px] text-gray-400 mt-1 font-sans">Pruebas aleatorias que aseguran una sobriedad táctica intachable.</p>
+          </div>
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/10">
+            <span class="block text-2xl font-bold text-copiv-red mb-1">Continuo</span>
+            <span class="block text-xs font-semibold text-white">Monitoreo de Puestos</span>
+            <p class="text-[10px] text-gray-400 mt-1 font-sans">Auditorías nocturnas aleatorias en garitas y zonas perimetrales.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Símbolos e Identidad -->
+      <div class="bg-copiv-darkGray/50 border border-copiv-green/30 rounded-3xl p-8 space-y-8">
+        <div class="text-center">
+          <h3 class="font-montserrat font-extrabold text-2xl text-white m-0">La Psicología Detrás de Nuestro Concepto</h3>
+          <p class="text-xs text-copiv-gold uppercase tracking-wider mt-1 block">Nuestra Fuerza Controlada Por La Técnica</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Symbol: Jaguar -->
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/20 text-center space-y-3 flex flex-col justify-between">
+            <div class="h-32 rounded-lg overflow-hidden mb-2">
+              <img 
+                src="https://images.unsplash.com/photo-1602491453977-18a09895503c?auto=format&fit=crop&w=800&q=80" 
+                alt="El Jaguar"
+                loading="lazy"
+                class="w-full h-full object-cover grayscale animate-[pulse_4s_infinite]" 
+              />
+            </div>
+            <h4 class="font-montserrat font-bold text-white text-sm m-0">El Jaguar Tikal</h4>
+            <p class="text-[11px] text-gray-400 font-light font-sans m-0 leading-relaxed">Representa el liderazgo de campo, control, inteligencia táctica y una formidable capacidad táctica de reacción.</p>
+          </div>
+
+          <!-- Symbol: Escudo -->
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/20 text-center space-y-3 flex flex-col justify-between">
+            <div class="h-32 rounded-lg overflow-hidden mb-2">
+              <img 
+                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" 
+                alt="El Escudo"
+                loading="lazy"
+                class="w-full h-full object-cover grayscale" 
+              />
+            </div>
+            <h4 class="font-montserrat font-bold text-white text-sm m-0">Protección Activa</h4>
+            <p class="text-[11px] text-gray-400 font-light font-sans m-0 leading-relaxed">Comunica la defensa del patrimonio, autoridad institucional y el respaldo sólido que resguarda sus bienes.</p>
+          </div>
+
+          <!-- Symbol: Engranaje -->
+          <div class="bg-copiv-black p-4 rounded-xl border border-copiv-green/20 text-center space-y-3 flex flex-col justify-between">
+            <div class="h-32 rounded-lg overflow-hidden mb-2">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" 
+                alt="La Tecnologia"
+                loading="lazy"
+                class="w-full h-full object-cover grayscale" 
+              />
+            </div>
+            <h4 class="font-montserrat font-bold text-white text-sm m-0">La Tecnología</h4>
+            <p class="text-[11px] text-gray-400 font-light font-sans m-0 leading-relaxed">Representa los procesos automatizados, la precisión, el engranaje del monitoreo con IA y el funcionamiento continuo.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VulnerabilityQuiz from '../components/ui/VulnerabilityQuiz';
+---
+
+<BaseLayout title="Autodiagnóstico de Riesgo de Seguridad - COPIV TIKAL" description="Evalúe de forma gratuita e inmediata el nivel de vulnerabilidad de sus instalaciones físicas y electrónicas con nuestro test táctico.">
+  
+  <div class="bg-gradient-to-b from-copiv-darkGray to-copiv-black py-12 border-b border-copiv-green/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <span class="text-copiv-red font-bold text-sm uppercase tracking-widest block"><i class="fa-solid fa-list-check mr-1"></i> Interactive Audit</span>
+      <h1 class="text-3xl sm:text-4xl font-montserrat font-extrabold text-white m-0">Autodiagnóstico de Vulnerabilidad</h1>
+      <p class="text-gray-400 max-w-xl mx-auto text-sm font-sans">Determine de forma inmediata el nivel de seguridad de sus instalaciones físicas y electrónicas completando el test táctico.</p>
+    </div>
+  </div>
+
+  <!-- VULNERABILITY QUIZ -->
+  <div class="py-12 bg-copiv-black">
+    <VulnerabilityQuiz client:load />
+  </div>
+
+</BaseLayout>
