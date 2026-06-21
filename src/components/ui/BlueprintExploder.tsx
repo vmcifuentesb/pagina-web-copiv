@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { resolvePath } from '../../utils/constants';
 
 interface Detail {
   title: string;
@@ -113,7 +114,7 @@ export default function BlueprintExploder() {
         </div>
         
         <div className="border-t border-copiv-green/20 pt-4 text-left">
-          <a href={import.meta.env.BASE_URL + 'diagnostico'} className="text-xs text-copiv-gold hover:underline font-bold decoration-none">
+          <a href={resolvePath('diagnostico')} className="text-xs text-copiv-gold hover:underline font-bold decoration-none">
             <i className="fa-solid fa-shield-halved mr-1"></i> Evaluar riesgos perimetrales en autodiagnóstico →
           </a>
         </div>

@@ -1,5 +1,5 @@
 ---
-import { NAV_ITEMS } from '../../utils/constants';
+import { NAV_ITEMS, resolvePath } from '../../utils/constants';
 
 const pathname = Astro.url.pathname;
 
@@ -13,9 +13,9 @@ const isActive = (path: string) => {
 
 <header class="sticky top-0 z-50 bg-copiv-darkGray/90 backdrop-blur-md border-b border-copiv-green/30 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
-      <!-- Minimalist Brand Name -->
-      <a href={import.meta.env.BASE_URL} data-astro-prefetch class="flex items-center gap-3 decoration-none">
+     <div class="flex items-center justify-between h-20">
+       <!-- Minimalist Brand Name -->
+      <a href={resolvePath('')} data-astro-prefetch class="flex items-center gap-3 decoration-none">
         <div class="border-l-4 border-copiv-gold pl-3 transition-all duration-300 hover:border-copiv-red">
           <span class="font-montserrat font-black text-2xl sm:text-3xl tracking-wider text-white block leading-none">COPIV</span>
           <span class="font-montserrat font-bold text-[10px] sm:text-[11px] tracking-widest text-copiv-gold uppercase block mt-1">TIKAL S.A.</span>
@@ -45,7 +45,7 @@ const isActive = (path: string) => {
           <i class="fa-solid fa-phone text-copiv-red animate-pulse"></i>
           <span>+502 3066 2135</span>
         </a>
-        <a href={import.meta.env.BASE_URL + 'diagnostico'} data-astro-prefetch class="bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold px-5 py-2.5 rounded-lg shadow-md shadow-copiv-red/20 hover:shadow-lg hover:shadow-copiv-red/30 hover:scale-105 transition-all text-sm decoration-none">
+        <a href={resolvePath('diagnostico')} data-astro-prefetch class="bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold px-5 py-2.5 rounded-lg shadow-md shadow-copiv-red/20 hover:shadow-lg hover:shadow-copiv-red/30 hover:scale-105 transition-all text-sm decoration-none">
           Auditoría de Riesgo <i class="fa-solid fa-shield-halved ml-1"></i>
         </a>
       </div>
@@ -80,7 +80,7 @@ const isActive = (path: string) => {
           <i class="fa-solid fa-phone text-copiv-red"></i>
           <span>+502 3066 2135</span>
         </a>
-        <a href={import.meta.env.BASE_URL + 'diagnostico'} data-astro-prefetch class="w-full bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold py-2.5 rounded-lg text-center decoration-none block">
+        <a href={resolvePath('diagnostico')} data-astro-prefetch class="w-full bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-semibold py-2.5 rounded-lg text-center decoration-none block">
           Auditar mis Instalaciones
         </a>
       </div>

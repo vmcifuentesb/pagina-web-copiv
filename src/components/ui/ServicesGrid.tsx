@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ErrorBoundary from './ErrorBoundary';
 import { getServices, type Service } from '../../lib/content/contentService';
+import { resolvePath } from '../../utils/constants';
 
 function ServicesGridInner() {
   const [activeFilter, setActiveFilter] = useState<'all' | 'physical' | 'technological'>('all');
@@ -112,7 +113,7 @@ function ServicesGridInner() {
 
             <div className="p-6 pt-0">
               <a 
-                href={import.meta.env.BASE_URL + 'diagnostico'} 
+                href={resolvePath('diagnostico')} 
                 className="w-full bg-copiv-green hover:bg-copiv-greenLight text-white font-bold py-2.5 rounded-lg text-xs transition duration-300 decoration-none inline-block text-center cursor-pointer border-0"
               >
                 {service.ctaLabel}

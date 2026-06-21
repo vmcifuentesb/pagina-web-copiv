@@ -7,10 +7,17 @@ export const SITE = {
   description: 'Soluciones avanzadas de seguridad privada, agentes tácticos y plataforma de garitas inteligentes en Guatemala.',
 };
 
+export const resolvePath = (path: string = '') => {
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
+};
+
 export const NAV_ITEMS = [
-  { href: import.meta.env.BASE_URL, label: 'Inicio' },
-  { href: `${import.meta.env.BASE_URL}servicios`, label: 'Servicios' },
-  { href: `${import.meta.env.BASE_URL}empresa`, label: 'La Empresa' },
-  { href: `${import.meta.env.BASE_URL}diagnostico`, label: 'Análisis de Riesgo' },
-  { href: `${import.meta.env.BASE_URL}contacto`, label: 'Contacto' },
+  { href: resolvePath(''), label: 'Inicio' },
+  { href: resolvePath('servicios'), label: 'Servicios' },
+  { href: resolvePath('empresa'), label: 'La Empresa' },
+  { href: resolvePath('diagnostico'), label: 'Análisis de Riesgo' },
+  { href: resolvePath('contacto'), label: 'Contacto' },
 ];
