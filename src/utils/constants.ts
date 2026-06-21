@@ -8,9 +8,9 @@ export const SITE = {
 };
 
 export const NAV_ITEMS = [
-  { href: '/', label: 'Inicio' },
-  { href: '/servicios', label: 'Servicios' },
-  { href: '/empresa', label: 'La Empresa' },
-  { href: '/diagnostico', label: 'Análisis de Riesgo' },
-  { href: '/contacto', label: 'Contacto' },
+  { href: import.meta.env.BASE_URL, label: 'Inicio' },
+  { href: `${import.meta.env.BASE_URL}servicios`, label: 'Servicios' },
+  { href: `${import.meta.env.BASE_URL}empresa`, label: 'La Empresa' },
+  { href: `${import.meta.env.BASE_URL}diagnostico`, label: 'Análisis de Riesgo' },
+  { href: `${import.meta.env.BASE_URL}contacto`, label: 'Contacto' },
 ];

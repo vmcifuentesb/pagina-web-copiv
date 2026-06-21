@@ -7,7 +7,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <span class="text-8xl font-black font-montserrat text-copiv-red">404</span>
     <h1 class="text-2xl font-montserrat font-bold text-white m-0">Página no encontrada</h1>
     <p class="text-gray-400 max-w-md font-sans">La ruta de seguridad solicitada no está en nuestro perímetro.</p>
-    <a href="/" class="bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-all decoration-none inline-block cursor-pointer">
+    <a href={import.meta.env.BASE_URL} class="bg-gradient-to-r from-copiv-red to-copiv-redDark text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-all decoration-none inline-block cursor-pointer">
       Volver al inicio
     </a>
   </div>

@@ -112,7 +112,7 @@ function ServicesGridInner() {
 
             <div className="p-6 pt-0">
               <a 
-                href="/diagnostico" 
+                href={import.meta.env.BASE_URL + 'diagnostico'} 
                 className="w-full bg-copiv-green hover:bg-copiv-greenLight text-white font-bold py-2.5 rounded-lg text-xs transition duration-300 decoration-none inline-block text-center cursor-pointer border-0"
               >
                 {service.ctaLabel}
