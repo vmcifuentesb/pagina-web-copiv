@@ -8,9 +8,9 @@
   --color-copiv-greenLight: #4B734F;
   --color-copiv-gold: #EFB810;
   --color-copiv-goldDark: #D4A30D;
-  --color-copiv-black: #0F120F;
-  --color-copiv-darkGray: #161916;
-  --color-copiv-lightGray: #F3F4F6;
+  --color-copiv-black: #F4F6F4;
+  --color-copiv-darkGray: #FFFFFF;
+  --color-copiv-lightGray: #F4F6F4;
   --color-copiv-silver: #C0C0C0;
 
   --font-sans: 'Inter', sans-serif;
@@ -19,8 +19,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0F120F;
-  color: #FFFFFF;
+  background-color: #F4F6F4;
+  color: #1C201C;
   scroll-behavior: smooth;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #FFFFFF 50%, #EFB810 100%);
+  background: linear-gradient(to right, #37553A 50%, #EFB810 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

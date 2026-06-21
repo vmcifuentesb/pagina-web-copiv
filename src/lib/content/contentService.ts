@@ -28,72 +28,142 @@ const USE_SANITY = false;
 
 const SERVICES: Service[] = [
   {
-    id: "agentes-centro-comercial",
-    title: "Agentes de Centro Comercial",
-    category: "physical",
-    categoryLabel: "Física",
-    description: "Especializados en la atención al público, prevención de robos, control de flujos de personas y coordinación con comerciantes.",
-    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52?auto=format&fit=crop&w=800&q=80",
-    features: [
-      "Control de grandes flujos",
-      "Coordinación con locales",
-      "Prevención de robos táctica"
-    ],
-    ctaLabel: "Solicitar Información"
-  },
-  {
-    id: "custodios-confianza",
-    title: "Custodios de Confianza",
-    category: "physical",
-    categoryLabel: "Física",
-    description: "Personal rigurosamente entrenado para la escolta y traslado de valores, documentos altamente confidenciales y activos.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-    features: [
-      "Traslados seguros blindados",
-      "Custodia de documentos",
-      "Protocolos de confidencialidad"
-    ],
-    ctaLabel: "Solicitar Información"
-  },
-  {
     id: "seguridad-institucional",
     title: "Seguridad para Instituciones",
     category: "physical",
     categoryLabel: "Física",
-    description: "Personal especializado en el control estricto de accesos, validación de identidades y resguardo perimetral para bancos o colegios.",
+    description: "Vigilancia interna y externa, control de accesos estrictos, y resguardo perimetral para bancos, colegios y sedes corporativas con supervisión preventiva.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     features: [
-      "Control de accesos de visitas",
-      "Prevención de intrusiones",
-      "Protección perimetral de elite"
+      "Vigilancia interna y externa",
+      "Control de accesos estricto",
+      "Protocolos preventivos premium"
     ],
     ctaLabel: "Solicitar Información"
   },
   {
-    id: "garitas-smart",
-    title: "Plataforma de Garitas SMART",
+    id: "patrullas-seguridad",
+    title: "Patrullas de Seguridad",
+    category: "physical",
+    categoryLabel: "Física",
+    description: "Servicio de patrullaje preventivo, supervisión perimetral, verificación de alarmas y reacción inmediata ante emergencias con cobertura diurna y nocturna.",
+    image: "https://images.unsplash.com/photo-1512428813824-f713c2411abb?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Patrullaje preventivo activo",
+      "Verificación táctica de alarmas",
+      "Cobertura 24/7 diurna/nocturna"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "seguridad-residencial",
+    title: "Seguridad Residencial",
+    category: "physical",
+    categoryLabel: "Física",
+    description: "Control riguroso de ingreso y salida, registro digital de visitantes, rondines preventivos constantes y atención inmediata de incidentes en condominios y residenciales.",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Registro de visitas y residentes",
+      "Rondines preventivos y patrullaje",
+      "Atención inmediata de incidentes"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "seguridad-centro-comercial",
+    title: "Seguridad para Centros Comerciales",
+    category: "physical",
+    categoryLabel: "Física",
+    description: "Prevención de robos y actos vandálicos, control de flujos de personas, atención y orientación a visitantes, y monitoreo preventivo de áreas comunes.",
+    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Prevención activa de pérdidas",
+      "Atención y servicio al cliente",
+      "Monitoreo de conductas sospechosas"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "custodia-seguridad",
+    title: "Custodia de Seguridad y Valores",
+    category: "physical",
+    categoryLabel: "Física",
+    description: "Custodia de transporte de mercancía valiosa, protección ejecutiva VIP y acompañamiento preventivo de rutas con reacción inmediata ante emergencias en carreteras.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Custodia en ruta y transporte",
+      "Protección ejecutiva VIP",
+      "Reacción inmediata a incidentes"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "seguridad-eventos",
+    title: "Seguridad para Eventos",
+    category: "physical",
+    categoryLabel: "Física",
+    description: "Control de invitados, vigilancia de áreas restringidas, manejo preventivo de multitudes y apoyo logístico en emergencias para eventos corporativos y masivos.",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Control estricto de accesos",
+      "Logística y manejo de multitudes",
+      "Planes de evacuación y apoyo"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "control-ingreso-inteligente",
+    title: "Control de Ingreso Inteligente",
     category: "technological",
     categoryLabel: "Tecnología",
-    description: "La última innovación para el control y automatización de accesos. Ideal para condominios residenciales y parques industriales.",
+    description: "Soluciones de control de acceso digital, incluyendo Panel Central IDBox V2, identificación facial premium, molinetes y cerraduras inteligentes, y arcos detectores de metales.",
     image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=800&q=80",
     features: [
-      "Registro digital automatizado",
-      "Integración con cámaras LPR",
-      "Reportes inmediatos inteligentes"
+      "Panel IDBox V2 y biometría",
+      "Identificación facial IP65",
+      "Molinetes y arcos detectores"
     ],
     ctaLabel: "Solicitar Información"
   },
   {
-    id: "cctv-ia",
+    id: "cctv-ia-predictiva",
     title: "CCTV e Inteligencia Artificial (IA)",
     category: "technological",
     categoryLabel: "Tecnología",
-    description: "Diseño e instalación de sistemas avanzados de cámaras IP acopladas a algoritmos inteligentes para análisis predictivo de amenazas.",
+    description: "Instalación de cámaras 4K IP, PTZ analógicas, multilente de 180° y cámaras con panel solar. Algoritmos de IA para protección perimetral, cruce de línea y conteo de personas.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     features: [
-      "Detección de patrones extraños",
-      "Central de alerta activa 24/7",
-      "Notificación inmediata de riesgos"
+      "Cámaras 4K IP y Multilente",
+      "Clasificación de objetos con IA",
+      "Autonomía con Panel Solar"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "gps-dascam-flotas",
+    title: "GPS & Das-Cam Inteligente",
+    category: "technological",
+    categoryLabel: "Tecnología",
+    description: "Monitoreo GPS en tiempo real de flotas, acompañado de Das-Cam de doble cámara Full HD y sistema de IA (DMS) para detectar fatiga y distracciones del conductor.",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Monitoreo GPS en ruta",
+      "Das-Cam doble cámara Full HD",
+      "Detección de fatiga con IA (DMS)"
+    ],
+    ctaLabel: "Solicitar Información"
+  },
+  {
+    id: "centro-control-operativo",
+    title: "Centro de Control Operativo (CCO)",
+    category: "technological",
+    categoryLabel: "Tecnología",
+    description: "Núcleo de monitoreo y centralización de datos en tiempo real de alarmas, GPS y cámaras, coordinando el análisis avanzado y respuesta rápida las 24 horas.",
+    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Centralización de datos en tiempo real",
+      "Respuesta inmediata a alertas",
+      "Análisis avanzado de flota 24/7"
     ],
     ctaLabel: "Solicitar Información"
   }

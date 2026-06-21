@@ -37,37 +37,37 @@ function ServicesGridInner() {
 
   return (
     <div className="space-y-12">
-      {/* Filter Navigation */}
-      <div className="flex flex-wrap justify-center gap-4">
+      {/* Category Filters */}
+      <div className="flex flex-wrap justify-center gap-3">
         <button 
           onClick={() => setActiveFilter('all')} 
-          className={`px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer ${
+          className={`px-5 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
             activeFilter === 'all' 
-              ? 'bg-copiv-gold text-copiv-black shadow-lg shadow-copiv-gold/20' 
-              : 'border border-copiv-green text-white hover:border-copiv-gold bg-transparent'
+              ? 'bg-copiv-green text-white shadow-md shadow-copiv-green/20' 
+              : 'border border-copiv-green/30 text-copiv-green hover:border-copiv-green bg-transparent'
           }`}
         >
-          Todos los Servicios
+          Todos
         </button>
         <button 
           onClick={() => setActiveFilter('physical')} 
-          className={`px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer ${
+          className={`px-5 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
             activeFilter === 'physical' 
-              ? 'bg-copiv-gold text-copiv-black shadow-lg shadow-copiv-gold/20' 
-              : 'border border-copiv-green text-white hover:border-copiv-gold bg-transparent'
+              ? 'bg-copiv-green text-white shadow-md shadow-copiv-green/20' 
+              : 'border border-copiv-green/30 text-copiv-green hover:border-copiv-green bg-transparent'
           }`}
         >
-          Seguridad Física y Agentes
+          Seguridad Física
         </button>
         <button 
           onClick={() => setActiveFilter('technological')} 
-          className={`px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer ${
+          className={`px-5 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
             activeFilter === 'technological' 
-              ? 'bg-copiv-gold text-copiv-black shadow-lg shadow-copiv-gold/20' 
-              : 'border border-copiv-green text-white hover:border-copiv-gold bg-transparent'
+              ? 'bg-copiv-green text-white shadow-md shadow-copiv-green/20' 
+              : 'border border-copiv-green/30 text-copiv-green hover:border-copiv-green bg-transparent'
           }`}
         >
-          Soluciones Tecnológicas e IA
+          Soluciones Tecnológicas
         </button>
       </div>
 
@@ -76,31 +76,33 @@ function ServicesGridInner() {
         {filteredServices.map(service => (
           <div 
             key={service.id} 
-            className="bg-copiv-darkGray border border-copiv-green/20 rounded-2xl overflow-hidden flex flex-col justify-between shadow-lg service-card transition-all duration-300 animate-[fade-in_0.3s_ease-out]"
+            className="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm service-card transition-all duration-300 animate-[fade-in_0.3s_ease-out]"
           >
-            <div>
-              <div className="relative h-48 overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              {service.image && (
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-500 hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-copiv-darkGray to-transparent"></div>
-                <span className={`absolute top-4 right-4 text-[10px] uppercase font-bold px-3 py-1 rounded-full border ${
-                  service.category === 'physical' 
-                    ? 'bg-copiv-green/80 text-copiv-gold border-copiv-gold/30' 
-                    : 'bg-copiv-red/80 text-white border-copiv-red/30'
-                }`}>
-                  {service.categoryLabel}
-                </span>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="font-montserrat font-bold text-lg text-white mb-2 text-left">{service.title}</h3>
-                <p className="text-xs text-gray-400 mb-6 font-sans text-left leading-relaxed">{service.description}</p>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
+              <span className={`absolute top-4 right-4 text-[9px] uppercase font-extrabold px-3 py-1 rounded-full border backdrop-blur-md ${
+                service.category === 'physical' 
+                  ? 'bg-copiv-green/10 text-copiv-green border-copiv-green/20' 
+                  : 'bg-copiv-red/10 text-copiv-red border-copiv-red/20'
+              }`}>
+                {service.category === 'physical' ? 'Física' : 'Tecnología'}
+              </span>
+            </div>
+
+            <div className="p-6 flex-grow flex flex-col justify-between">
+              <div className="text-left">
+                <span className="text-[10px] text-copiv-red font-bold uppercase tracking-wider block mb-1 font-sans">{service.category === 'physical' ? 'Agente de Elite' : 'Soporte Inteligente'}</span>
+                <h3 className="font-montserrat font-bold text-xl text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-xs text-gray-600 mb-6 font-sans text-left leading-relaxed">{service.description}</p>
                 
-                <ul className="text-xs text-gray-300 space-y-2 mb-6 list-none p-0 text-left">
+                <ul className="text-xs text-gray-700 space-y-2 mb-6 list-none p-0 text-left">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center">
                       <i className="fa-solid fa-check text-copiv-red mr-2"></i>

@@ -11,7 +11,7 @@ const isActive = (path: string) => {
 };
 ---
 
-<header class="sticky top-0 z-50 bg-copiv-darkGray/90 backdrop-blur-md border-b border-copiv-green/30 transition-all duration-300">
+<header class="sticky top-0 z-50 bg-copiv-green/95 backdrop-blur-md border-b border-copiv-greenLight/20 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex items-center justify-between h-20">
        <!-- Minimalist Brand Name -->
@@ -60,7 +60,7 @@ const isActive = (path: string) => {
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-copiv-darkGray border-t border-copiv-green/30">
+  <div id="mobile-menu" class="hidden md:hidden bg-copiv-green border-t border-copiv-greenLight/20">
     <div class="px-2 pt-2 pb-4 space-y-1">
       {NAV_ITEMS.map(item => (
         <a
@@ -68,14 +68,14 @@ const isActive = (path: string) => {
           data-astro-prefetch
           class={`block w-full text-left px-4 py-2.5 rounded-md text-base font-medium transition decoration-none ${
             isActive(item.href)
-              ? 'text-copiv-gold bg-copiv-green/20'
-              : 'text-white hover:bg-copiv-green/30'
+              ? 'text-copiv-gold bg-copiv-greenLight/30'
+              : 'text-white hover:bg-copiv-greenLight/20'
           }`}
         >
           {item.label}
         </a>
       ))}
-      <div class="pt-4 border-t border-copiv-green/20 px-4 flex flex-col gap-3">
+      <div class="pt-4 border-t border-copiv-greenLight/20 px-4 flex flex-col gap-3">
         <a href="tel:+50230662135" class="text-sm font-semibold text-white hover:text-copiv-gold flex items-center gap-2">
           <i class="fa-solid fa-phone text-copiv-red"></i>
           <span>+502 3066 2135</span>

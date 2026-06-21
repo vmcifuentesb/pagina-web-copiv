@@ -50,57 +50,57 @@ function ContactFormInner() {
     <form onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Su Nombre:</label>
+          <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Su Nombre:</label>
           <input 
             type="text" 
             value={name}
             onChange={(e) => setName(e.target.value)}
             required 
             placeholder="Ej: Juan Perez" 
-            className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm font-sans"
+            className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm font-sans"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Nombre de Empresa (Opcional):</label>
+          <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Nombre de Empresa (Opcional):</label>
           <input 
             type="text" 
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             placeholder="Ej: Alimentos S.A." 
-            className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm font-sans"
+            className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm font-sans"
           />
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Correo Electronico:</label>
+          <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Correo Electronico:</label>
           <input 
             type="email" 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required 
             placeholder="correo@empresa.com" 
-            className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm font-mono"
+            className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm font-mono"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Telefono:</label>
+          <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Telefono:</label>
           <input 
             type="tel" 
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required 
             placeholder="48542084" 
-            className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm font-mono"
+            className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm font-mono"
           />
         </div>
       </div>
       <div>
-        <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Servicio de Interes:</label>
+        <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Servicio de Interes:</label>
         <select 
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm font-sans"
+          className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm font-sans"
         >
           <option value="Agentes de Seguridad">Agentes de Seguridad Fisica</option>
           <option value="Sistemas CCTV o IA">Sistemas de Videovigilancia CCTV e IA</option>
@@ -110,14 +110,14 @@ function ContactFormInner() {
         </select>
       </div>
       <div>
-        <label className="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1 font-sans">Mensaje o Requerimiento:</label>
+        <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1 font-sans">Mensaje o Requerimiento:</label>
         <textarea 
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5} 
           required 
           placeholder="Describa brevemente las necesidades de resguardo tactico que requiere de COPIV..." 
-          className="w-full bg-copiv-black text-white px-4 py-3 rounded-lg border border-copiv-green/50 focus:border-copiv-gold focus-visible:ring-2 focus-visible:ring-copiv-gold text-sm resize-none font-sans"
+          className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg border border-gray-300 focus:border-copiv-green focus-visible:ring-2 focus-visible:ring-copiv-green text-sm resize-none font-sans"
         ></textarea>
       </div>
 

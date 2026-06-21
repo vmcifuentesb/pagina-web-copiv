@@ -95,17 +95,17 @@ export default function BlueprintExploder() {
       </div>
 
       {/* Right Detail Presentation Panel */}
-      <div className="lg:col-span-5 bg-copiv-darkGray border border-copiv-green/30 rounded-2xl p-6 shadow-xl space-y-6 flex flex-col justify-between min-h-[360px]">
+      <div className="lg:col-span-5 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-6 flex flex-col justify-between min-h-[360px]">
         <div className="space-y-4">
-          <div className="w-12 h-12 bg-copiv-green/20 text-copiv-gold border border-copiv-gold rounded-full flex items-center justify-center text-xl">
+          <div className="w-12 h-12 bg-copiv-green/10 text-copiv-green border border-copiv-green/30 rounded-full flex items-center justify-center text-xl">
             <i className={currentDetail ? currentDetail.iconClass : "fa-solid fa-microchip"}></i>
           </div>
           
-          <h4 className="font-montserrat font-bold text-lg text-white text-left">
+          <h4 className="font-montserrat font-bold text-lg text-gray-900 text-left">
             {currentDetail ? currentDetail.title : "Tecnología de Seguridad COPIV"}
           </h4>
           
-          <p className="text-xs text-gray-300 leading-relaxed font-light font-sans text-left">
+          <p className="text-xs text-gray-600 leading-relaxed font-light font-sans text-left">
             {currentDetail 
               ? currentDetail.desc 
               : "Seleccione cualquiera de los puntos numéricos del plano interactivo de la izquierda para desglosar el funcionamiento e integración de cada sistema táctico de protección."
