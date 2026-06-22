@@ -6,6 +6,10 @@ import SkipToContent from '../components/ui/SkipToContent.astro';
 import { CSP } from '../utils/csp';
 import '../styles/global.css';
 
+// Componentes flotantes (ocultos temporalmente a petición del usuario)
+// import EmergencyButton from '../components/ui/EmergencyButton';
+// import ChatJaguar from '../components/ui/ChatJaguar';
+
 interface Props {
   title?: string;
   description?: string;
@@ -85,7 +89,9 @@ const canonical = `${Astro.site?.origin ?? 'https://copivtikal.com'}${Astro.url.
     <!-- Footer -->
     <Footer />
 
-
+    {/* Botones flotantes comentados para usarlos más adelante */}
+    {/* <EmergencyButton client:load /> */}
+    {/* <ChatJaguar client:idle /> */}
 
     <!-- Toast Notification Container -->
     <div id="toast-container" class="fixed bottom-6 left-6 z-50 space-y-2 pointer-events-none"></div>
