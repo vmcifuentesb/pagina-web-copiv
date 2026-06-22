@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ui/ContactForm';
-import LeafletMap from '../components/ui/LeafletMap';
 ---
 
 <BaseLayout title="Contacto y Ubicaciones - COPIV TIKAL" description="Contáctenos 24/7/365. Solicite asesoría de seguridad táctica para su empresa, industria o condominio en Guatemala.">
@@ -66,8 +65,15 @@ import LeafletMap from '../components/ui/LeafletMap';
           <div class="bg-white border border-gray-200 rounded-2xl p-4 overflow-hidden shadow-sm space-y-3 text-left">
             <span class="text-xs text-gray-900 font-bold block font-montserrat">Ubicación de Nuestras Oficinas</span>
             
-            {/* React Island for Map */}
-            <LeafletMap client:visible />
+            <div class="w-full h-[300px] rounded-xl overflow-hidden border border-copiv-green/30 relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.606362544155!2d-90.5843!3d14.5954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a1afdf958019%3A0x7d6c63ed65c71a33!2sCiudad%20San%20Crist%C3%B3bal%2C%20Mixco%2C%20Guatemala!5e0!3m2!1ses!2sus!4v1718301234567!5m2!1ses!2sus" 
+                class="absolute top-0 left-0 w-full h-full border-0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
           </div>
         </div>
 

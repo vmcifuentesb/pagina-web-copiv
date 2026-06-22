@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CaseStudySlider from '../components/ui/CaseStudySlider';
 ---
 
-<BaseLayout title="La Empresa - COPIV TIKAL" description="Conozca la historia, misión, visión y los rigurosos procesos de selección y confiabilidad de nuestro personal de seguridad.">
+<BaseLayout title="Nuestra Empresa - COPIV TIKAL" description="Conozca más sobre nuestra trayectoria, valores y el equipo de profesionales que conforma COPIV TIKAL." heroImg="/images/hero_empresa.png">
   <!-- Hero Header -->
   <div class="bg-gradient-to-b from-white to-copiv-lightGray py-16 border-b border-copiv-green/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -122,11 +122,24 @@ import CaseStudySlider from '../components/ui/CaseStudySlider';
             <p class="text-[11px] text-gray-600 font-light font-sans m-0 leading-relaxed">Representa los procesos automatizados, la precisión, el engranaje del monitoreo con IA y el funcionamiento continuo.</p>
           </div>
         </div>
-      </div>       </div>
-        </div>
       </div>
-
     </div>
   </div>
+
+  <!-- Cross-Linking CTA -->
+  <section class="bg-copiv-black py-16 text-center border-t border-copiv-green/20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold font-montserrat text-white mb-6">Nuestra experiencia a su disposición</h2>
+      <p class="text-gray-400 font-sans mb-8">Conozca cómo nuestros agentes tácticos y nuestras soluciones tecnológicas pueden asegurar sus instalaciones.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/servicios" class="inline-flex items-center justify-center gap-2 bg-copiv-green hover:bg-copiv-greenLight text-white font-bold px-8 py-3.5 rounded-xl transition-colors duration-300 decoration-none shadow-lg">
+          Ver Servicios de Guardias <i class="fa-solid fa-shield"></i>
+        </a>
+        <a href="/productos" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-copiv-gold text-copiv-gold hover:bg-copiv-gold hover:text-copiv-black font-bold px-8 py-3.5 rounded-xl transition-all duration-300 decoration-none shadow-lg">
+          Ver Catálogo Tecnológico <i class="fa-solid fa-microchip"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
 </BaseLayout>

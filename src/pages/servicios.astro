@@ -4,7 +4,7 @@ import BlueprintExploder from '../components/ui/BlueprintExploder';
 import ServicesGrid from '../components/ui/ServicesGrid';
 ---
 
-<BaseLayout title="Servicios Especializados de Seguridad - COPIV TIKAL" description="Catálogo completo de soluciones tácticas de seguridad física y monitoreo inteligente con IA en toda Guatemala.">
+<BaseLayout title="Nuestros Servicios - COPIV TIKAL" description="Soluciones integrales de seguridad privada, agentes uniformados, polígrafo y control de acceso." heroImg="/images/hero_servicios.png">
   
   <!-- Header Section -->
   <div class="bg-gradient-to-b from-white to-copiv-lightGray py-16 border-b border-copiv-green/10">
@@ -36,5 +36,21 @@ import ServicesGrid from '../components/ui/ServicesGrid';
       <ServicesGrid client:visible />
     </div>
   </div>
+
+  <!-- Cross-Linking CTA -->
+  <section class="bg-copiv-black py-16 text-center border-t border-copiv-green/20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold font-montserrat text-white mb-6">Integre Tecnología a su Seguridad Física</h2>
+      <p class="text-gray-400 font-sans mb-8">Potencie la eficiencia de nuestros agentes uniformados con controles de acceso biométricos y CCTV inteligente.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/productos" class="inline-flex items-center justify-center gap-2 bg-copiv-gold text-copiv-black hover:bg-white font-bold px-8 py-3.5 rounded-xl transition-colors duration-300 decoration-none shadow-lg">
+          Explorar Soluciones Tecnológicas <i class="fa-solid fa-microchip"></i>
+        </a>
+        <a href="/empresa" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-copiv-green text-copiv-green hover:bg-copiv-green hover:text-white font-bold px-8 py-3.5 rounded-xl transition-all duration-300 decoration-none shadow-lg">
+          Conocer La Empresa <i class="fa-solid fa-building-shield"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
 </BaseLayout>
