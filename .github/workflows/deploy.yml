@@ -3,7 +3,8 @@ name: Despliegue Automático en Hosting PHP
 on:
   push:
     branches:
-      - main # Se ejecuta automáticamente cuando haces push a la rama main
+      - main
+      - master
 
 jobs:
   web-deploy:
@@ -31,4 +32,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}   # Usuario FTP de cPanel
         password: ${{ secrets.FTP_PASSWORD }}   # Contraseña FTP
         local-dir: ./dist/                      # Subir solo la carpeta compilada de Astro
-        server-dir: /public_html/               # Carpeta destino en tu servidor PHP
+        server-dir: /copivgt.com/               # Carpeta destino en tu servidor PHP

@@ -5,8 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vmcifuentesb.github.io',
-  base: '/pagina-web-copiv',
+  site: 'https://copivgt.com',
+  base: '/',
   output: 'static',
   image: {
     domains: ['images.unsplash.com'],
