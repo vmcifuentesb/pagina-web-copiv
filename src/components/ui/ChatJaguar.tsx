@@ -17,7 +17,7 @@ Valores institucionales:
 - Colores de marca: Rojo para alerta y acción inmediata (#E22732), Verde para estabilidad, confianza y seguridad institucional (#37553A), Negro para formalidad y Blanco para claridad. El Jaguar es nuestro símbolo de control, liderazgo, capacidad de reacción y anticipación de campo.
 - Servicios principales: Plataforma de Garitas SMART, CCTV con Monitoreo Activo e Inteligencia Artificial (IA), Controles de Acceso, Alarmas, GPS satelital, Agentes de Centro Comercial, Custodios de Activos y Valores, Agentes de Instituciones, y Moto Patrullas de Reacción.
 - Dirección central: 15 avenida 1-73 Ciudad San Cristóbal Z.8 Mixco.
-- Contacto: Teléfono +502 3099 0692 (Ventas), (502) 4854-2084 (Soporte Técnico). Emails: ventas@copivgt.com, soportecnico@copivgt.com.
+- Contacto: Teléfono +502 5212 0606 (Ventas), (502) 4854-2084 (Soporte Técnico). Emails: ventas@copivgt.com, soportecnico@copivgt.com.
 
 Instrucciones para las respuestas:
 - Responde siempre con profesionalismo, elegancia y un tono de seguridad táctica. No hables de cosas administrativas, cotizaciones detalladas o soporte técnico operativo interno. Concéntrate en la excelencia del servicio y la protección.
@@ -56,7 +56,7 @@ function ChatJaguarInner() {
       return "Contamos con agentes especializados certificados en centros comerciales, instituciones y custodia de activos/valores. Cada especialista pasa por evaluaciones tácticas y de primeros auxilios de forma regular. ¿Le gustaría realizar un autodiagnóstico de riesgos en línea para su empresa?";
     }
     if (lower.includes('contacto') || lower.includes('telefono') || lower.includes('ubicacion') || lower.includes('oficina') || lower.includes('correo')) {
-      return "Nuestras oficinas centrales están en la **15 avenida 1-73 Ciudad San Cristóbal Z.8 Mixco**. Puede escribirnos directamente a **ventas@copivgt.com** o llamarnos al **+502 3099 0692**.";
+      return "Nuestras oficinas centrales están en la **15 avenida 1-73 Ciudad San Cristóbal Z.8 Mixco**. Puede escribirnos directamente a **ventas@copivgt.com** o llamarnos al **+502 5212 0606**.";
     }
     return "Como representante de **COPIV TIKAL S.A.**, le informo que ofrecemos soporte avanzado en seguridad privada, investigación, garitas SMART, patrullas y guardias de alta confiabilidad. ¿Le gustaría realizar un autodiagnóstico de riesgos en línea para su empresa?";
   };

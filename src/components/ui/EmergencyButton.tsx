@@ -41,7 +41,7 @@ function EmergencyButtonInner() {
         throw new Error(data.message || 'Error del servidor');
       }
     } catch {
-      showToast('❌ Error al enviar alerta. Llame al +502 3099 0692.');
+      showToast('❌ Error al enviar alerta. Llame al +502 5212 0606.');
     } finally {
       setLoading(false);
     }
