@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { resolvePath } from '../../utils/constants';
 
 type Category = 'Todos' | 'Cámaras CCTV' | 'Control de Acceso' | 'Biométricos' | 'Sistemas de Alarma';
 
@@ -128,7 +129,7 @@ export default function ProductsCatalog() {
 
               {/* CTA */}
               <a 
-                href={`/contacto?product=${product.id}`}
+                href={resolvePath(`contacto?product=${product.id}`)}
                 className="w-full text-center bg-white border-2 border-copiv-green text-copiv-green font-bold py-2.5 rounded-xl hover:bg-copiv-green hover:text-white transition-colors duration-300 flex items-center justify-center gap-2 decoration-none"
               >
                 Cotizar Solución <i className="fa-solid fa-arrow-right"></i>
