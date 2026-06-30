@@ -31,10 +31,10 @@ if (!$input) {
 define('CONTACT_EMAIL', 'ventas@copivgt.com');
 define('EMERGENCY_EMAIL', 'soportecnico@copivgt.com');
 define('DIAGNOSTICO_EMAIL', 'ventas@copivgt.com');
-define('FROM_EMAIL', 'web@copivtikal.com');
+define('FROM_EMAIL', 'web@copivgt.com');
 define('FROM_NAME', 'COPIV TIKAL - Web');
 define('SITE_NAME', 'COPIV TIKAL S.A.');
-define('SITE_URL', 'https://copivtikal.com');
+define('SITE_URL', 'https://copivgt.com');
 
 function jsonResponse($data, $code = 200) {
     http_response_code($code);

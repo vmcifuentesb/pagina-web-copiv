@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'COPIV TIKAL S.A.',
-  url: 'https://copivtikal.com',
+  url: 'https://copivgt.com',
   phone: '+502 5212 0606',
   email: 'info@copivtikal.com',
   address: 'Guatemala City, Guatemala',

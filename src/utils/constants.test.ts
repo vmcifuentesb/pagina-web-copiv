@@ -7,7 +7,7 @@ describe('constants', () => {
   });
 
   it('should have site URL', () => {
-    expect(SITE.url).toBe('https://copivtikal.com');
+    expect(SITE.url).toBe('https://copivgt.com');
   });
 
   it('should have 5 nav items', () => {
