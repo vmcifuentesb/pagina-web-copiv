@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CaseStudySlider from '../components/ui/CaseStudySlider';
+import { resolvePath } from '../utils/constants';
 ---
 
 <BaseLayout title="Nuestra Empresa - COPIV TIKAL" description="Conozca más sobre nuestra trayectoria, valores y el equipo de profesionales que conforma COPIV TIKAL." heroImg="/images/hero_empresa.png">
@@ -84,7 +85,7 @@ import CaseStudySlider from '../components/ui/CaseStudySlider';
           <div class="bg-copiv-lightGray p-4 rounded-xl border border-gray-200 text-center space-y-3 flex flex-col justify-between">
             <div class="h-32 rounded-lg overflow-hidden mb-2">
               <img 
-                src="https://images.unsplash.com/photo-1602491453977-18a09895503c?auto=format&fit=crop&w=800&q=80" 
+                src={resolvePath('images/jaguar_tikal.png')} 
                 alt="El Jaguar"
                 loading="lazy"
                 class="w-full h-full object-cover grayscale animate-[pulse_4s_infinite]" 

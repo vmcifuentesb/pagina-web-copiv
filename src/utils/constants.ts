@@ -16,8 +16,8 @@ export const resolvePath = (path: string = '') => {
 
 export const NAV_ITEMS = [
   { href: resolvePath(''), label: 'Inicio' },
+  { href: resolvePath('empresa'), label: 'Quiénes Somos' },
   { href: resolvePath('servicios'), label: 'Servicios de Guardias' },
   { href: resolvePath('productos'), label: 'Soluciones Tecnológicas' },
-  { href: resolvePath('empresa'), label: 'La Empresa' },
   { href: resolvePath('contacto'), label: 'Contacto' },
 ];

@@ -1,4 +1,5 @@
 import { sanityClient } from '../sanityClient';
+import { resolvePath } from '../../utils/constants';
 
 export interface Service {
   id: string;
@@ -47,7 +48,7 @@ const SERVICES: Service[] = [
     category: "physical",
     categoryLabel: "Física",
     description: "Servicio de patrullaje preventivo, supervisión perimetral, verificación de alarmas y reacción inmediata ante emergencias con cobertura diurna y nocturna.",
-    image: "https://images.unsplash.com/photo-1512428813824-f713c2411abb?auto=format&fit=crop&w=800&q=80",
+    image: resolvePath('images/patrullas_seguridad.png'),
     features: [
       "Patrullaje preventivo activo",
       "Verificación táctica de alarmas",
@@ -159,7 +160,7 @@ const SERVICES: Service[] = [
     category: "technological",
     categoryLabel: "Tecnología",
     description: "Núcleo de monitoreo y centralización de datos en tiempo real de alarmas, GPS y cámaras, coordinando el análisis avanzado y respuesta rápida las 24 horas.",
-    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+    image: resolvePath('images/centro_control.png'),
     features: [
       "Centralización de datos en tiempo real",
       "Respuesta inmediata a alertas",

@@ -95,7 +95,7 @@ export default function ProductsCatalog() {
             
             {/* Image Container */}
             <div className="h-56 overflow-hidden relative">
-              <div className="absolute top-4 right-4 z-10 bg-copiv-black/80 backdrop-blur-md text-copiv-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              <div className="absolute top-4 right-4 z-10 bg-copiv-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 {product.category}
               </div>
               <img 
