@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'COPIV TIKAL S.A.',
   url: 'https://copivtikal.com',
-  phone: '+502 3066 2135',
+  phone: '+502 3099 0692',
   email: 'info@copivtikal.com',
   address: 'Guatemala City, Guatemala',
   description: 'Soluciones avanzadas de seguridad privada, agentes tácticos y plataforma de garitas inteligentes en Guatemala.',
